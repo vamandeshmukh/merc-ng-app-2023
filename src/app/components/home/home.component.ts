@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
 
-    firstName: string = 'Sonu'; 
-    lastName: string = 'Singh'; 
+    firstName: string = 'Sonu';
+    lastName: string = 'Singh';
+    empData = { eid: 101, firstName: 'Monu' };
 
 }
 
@@ -25,4 +26,8 @@ export class HomeComponent {
 
 //   display here    <--   send from here
 
+// interpolation - component to template 
 
+// property binding - component to template 
+// event binding - template to component 
+// two-way binding - two way  
