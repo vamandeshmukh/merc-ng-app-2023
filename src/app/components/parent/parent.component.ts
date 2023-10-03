@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 
   parentData: string = 'Sonu';
+  childDataInParent: string = '';
 
+  getDataFromChild = (dataFc: string) => {
+    // console.log(dataFc);
+    this.childDataInParent = dataFc;
+  };
 }
