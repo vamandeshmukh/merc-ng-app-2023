@@ -1,6 +1,7 @@
 {
   "name": "merc-ng-app-2023",
   "version": "0.0.0",
+  "author": "Vaman Deshmukh",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
