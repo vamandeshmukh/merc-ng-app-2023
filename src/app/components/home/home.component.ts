@@ -28,9 +28,6 @@ export class HomeComponent {
 }
 
 
-
-
-
 // data binding
 
 // template (HTML)     component (Script)
@@ -39,7 +36,5 @@ export class HomeComponent {
 
 // interpolation - component to template
 // property binding - component to template
-
 // event binding - template to component
-
 // two-way binding - two way  
