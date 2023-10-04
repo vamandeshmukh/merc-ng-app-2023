@@ -35,3 +35,6 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+

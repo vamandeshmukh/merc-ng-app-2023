@@ -17,6 +17,7 @@ export class BlogDataService {
   };
 
   getBlogById(blogId: number): Observable<Blog> {
+    console.log(blogId);
     return this.http.get<Blog>(`${this.blogUrl}/${blogId}`);
   }
 
@@ -24,6 +25,10 @@ export class BlogDataService {
 
   // addnewBlog = (newBlog: Blog) => { };
 
+  addnewBlog = (newBlog: Blog) => {
+    console.log(newBlog);
+    return this.http.post(this.blogUrl, newBlog);
+  };
 }
 
 
