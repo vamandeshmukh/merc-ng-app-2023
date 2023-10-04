@@ -15,6 +15,9 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { Page404Component } from './components/page404/page404.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { WriteBlogComponent } from './components/write-blog/write-blog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
     BlogListComponent,
     BlogDetailsComponent,
     Page404Component,
-    CommentListComponent
+    CommentListComponent,
+    ToolbarComponent,
+    FooterComponent,
+    WriteBlogComponent
   ],
   imports: [
     BrowserModule,
