@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
-import { BlogListclsComponent } from './components/blog-listcls/blog-listcls.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { BlogListclsComponent } from './components/blog-listcls/blog-listcls.com
     AboutComponent,
     ParentComponent,
     ChildComponent,
-    BlogListComponent,
-    BlogListclsComponent
+    BlogListComponent
   ],
   imports: [
     BrowserModule,

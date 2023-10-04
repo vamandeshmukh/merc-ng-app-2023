@@ -38,12 +38,16 @@ export class HomeComponent {
 
 // pipe -
 // data transformation -
-// https://angular.io/guide/pipes 
+// https://angular.io/guide/pipes
 
 
-// decorator 
+// decorator
 
-// directives 
+// directives - give instruction to DOM
+// directives - 3 types
+// structural directives - *ngIf, *ngFor, *ngSwitch, ...
+// attribute directives - *ngStyle, *ngClass, ...
+// custom directives - components 
 
 
 
