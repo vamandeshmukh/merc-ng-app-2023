@@ -2,10 +2,21 @@
 
 <div *ngIf="allBlogs">
     <div *ngFor="let blog of allBlogs">
-        <p>{{blog.title}}</p>
+        <a [routerLink]="['/blog-details', blog.id]">{{blog.title}}</a>
     </div>
 </div>
 
+
+
+
+<!-- <p>blog-list works!</p>
+
+<div *ngIf="allBlogs">
+    <div *ngFor="let blog of allBlogs">
+        <p>{{blog.title}}</p>
+    </div>
+</div>
+ -->
 
 
 <!-- <p>blog-list works!</p>
