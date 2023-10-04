@@ -18,6 +18,7 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WriteBlogComponent } from './components/write-blog/write-blog.component';
+import { WriterDetailsComponent } from './components/writer-details/writer-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { WriteBlogComponent } from './components/write-blog/write-blog.component
     CommentListComponent,
     ToolbarComponent,
     FooterComponent,
-    WriteBlogComponent
+    WriteBlogComponent,
+    WriterDetailsComponent
   ],
   imports: [
     BrowserModule,

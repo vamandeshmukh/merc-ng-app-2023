@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ToolbarComponent {
 
+  randomBlogId: number = Math.floor(Math.random() * 100);
+
 }

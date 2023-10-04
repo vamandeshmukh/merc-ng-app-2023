@@ -1,7 +1,10 @@
+<app-writer-details [writerId]="blogData.userId"></app-writer-details>
 
 <div *ngIf="blogData">
     <h2>{{ blogData.title }}</h2>
     <p>{{ blogData.body }}</p>
+    <p>{{blogData.userId}}</p>
+    <p>{{blogData.id}} </p>
 </div>
 
-<app-comment-list [pId]="blogId"></app-comment-list>
+<app-comment-list [pId]="blogData.id"></app-comment-list>

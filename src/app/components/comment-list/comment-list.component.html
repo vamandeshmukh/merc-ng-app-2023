@@ -1,6 +1,5 @@
-<p>comment-list works!</p>
-
 <div *ngIf="commentList">
+    <p>{{commentList.length}} Comments: </p>
     <hr />
     <div *ngFor="let comment of commentList">
         <p>{{comment.name}}</p>
