@@ -13,6 +13,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     ParentComponent,
     ChildComponent,
     BlogListComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

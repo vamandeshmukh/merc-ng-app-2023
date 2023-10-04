@@ -18,6 +18,7 @@ export class BlogDetailsComponent {
 
   ngOnInit() {
     this.blogId = this.actRoute.snapshot.paramMap.get('id');
+
     this.blogDataService.getBlogById(this.blogId)
       .subscribe(
         (resp) => {
