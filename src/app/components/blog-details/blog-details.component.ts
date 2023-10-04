@@ -1,3 +1,9 @@
+
+// add comments to this blog post 
+// comments component 
+// comment model interface 
+// comment service 
+
 import { Component } from '@angular/core';
 import { BlogDataService } from 'src/app/services/blog-data.service';
 import { Blog } from 'src/app/models/blog.model';

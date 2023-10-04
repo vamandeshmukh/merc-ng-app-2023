@@ -14,6 +14,7 @@ import { ChildComponent } from './components/child/child.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { Page404Component } from './components/page404/page404.component';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Page404Component } from './components/page404/page404.component';
     ChildComponent,
     BlogListComponent,
     BlogDetailsComponent,
-    Page404Component
+    Page404Component,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,
