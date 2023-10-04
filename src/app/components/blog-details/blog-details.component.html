@@ -1,8 +1,7 @@
-<p>blog-details works!</p>
-
-<p>render blog id {{blogId}} here </p>
 
 <div *ngIf="blogData">
     <h2>{{ blogData.title }}</h2>
     <p>{{ blogData.body }}</p>
 </div>
+
+<app-comment-list [pId]="blogId"></app-comment-list>

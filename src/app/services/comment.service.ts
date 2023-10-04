@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Comment } from '../models/comment.model';
 
 
@@ -12,7 +13,8 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
-  getCommentByPostId = (postId: number) => {
-
+  getCommentByPostId = (postId: number): Observable<Comment[]> => {
+    console.log(postId);
+    return this.http.get<Comment[]>(`${this.commentUrl}?postId=${postId}`);
   };
 }

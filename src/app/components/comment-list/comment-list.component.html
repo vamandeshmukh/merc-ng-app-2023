@@ -1,1 +1,11 @@
 <p>comment-list works!</p>
+
+<div *ngIf="commentList">
+    <hr />
+    <div *ngFor="let comment of commentList">
+        <p>{{comment.name}}</p>
+        <p>{{comment.body}}</p>
+        <p>{{comment.email}}</p>
+        <hr />
+    </div>
+</div>
