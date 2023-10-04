@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Blog } from 'src/app/models/blog.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,23 @@ export class BlogDataService {
 
   constructor(private http: HttpClient) { }
 
-  getAllBlogs = (): Observable<any[]> => {
-    console.log('getAllBlogs');
-    return this.http.get<any[]>(this.blogUrl);
+  getAllBlogs = (): Observable<Blog[]> => {
+    return this.http.get<Blog[]>(this.blogUrl);
   };
 
-  // getBlogById = (id: number) => { };
+  getBlogById(blogId: number): Observable<Blog> {
+    return this.http.get<Blog>(`${this.blogUrl}/${blogId}`);
+  }
 
-  // addnewBlog = () => { };
+  // getBlogByTitle = (title: string) => { };
+
+  // addnewBlog = (newBlog: Blog) => { };
 
 }
+
+
+
+
+
+
+

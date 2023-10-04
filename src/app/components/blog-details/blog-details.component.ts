@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { BlogDataService } from 'src/app/services/blog-data.service';
+import { Blog } from 'src/app/models/blog.model';
+
 
 @Component({
   selector: 'app-blog-details',
@@ -8,7 +11,19 @@ import { Component } from '@angular/core';
 export class BlogDetailsComponent {
 
   blogId: number = 22;
+  blogData: Blog | any = '';
 
-  // code to fetch this data 
+  constructor(private blogDataService: BlogDataService) { }
 
+  ngOnInit() {
+    this.blogId = 22;
+    this.blogDataService.getBlogById(this.blogId)
+      .subscribe((resp) => {
+        console.log(resp);
+        this.blogData = resp;
+      });
+  }
 }
+
+
+
