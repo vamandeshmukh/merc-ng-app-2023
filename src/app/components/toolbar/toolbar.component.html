@@ -1,10 +1,12 @@
 <nav>
-    <a [routerLink]="['home']"> <img height="24px"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/320px-Mercedes-Benz_Logo_2010.svg.png"
-            alt="merc logo"></a>
-    <a [routerLink]="['all-blogs']">All Blogs</a>
-    <a [routerLink]="['blog-details', randomBlogId]">Blog of the Day</a>
-    <a [routerLink]="['write-blog']">Write Blog</a>
-    <a>Login</a>
-    <a>Register</a>
+    <ul>
+        <li><a [routerLink]="['home']"> <img height="24px"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mercedes-Benz_Logo_2010.svg/320px-Mercedes-Benz_Logo_2010.svg.png"
+                    alt="merc logo"></a></li>
+        <li><a [routerLink]="['all-blogs']">All Blogs</a></li>
+        <li><a [routerLink]="['blog-details', randomBlogId]">Blog of the Day</a></li>
+        <li><a [routerLink]="['write-blog']">Write Blog</a></li>
+        <li style="float:right"><a>Register</a></li>
+        <li style="float:right"><a>Login</a></li>
+    </ul>
 </nav>
