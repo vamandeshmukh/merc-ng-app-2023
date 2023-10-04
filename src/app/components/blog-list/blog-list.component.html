@@ -1,5 +1,15 @@
 <p>blog-list works!</p>
 
+<div *ngIf="allBlogs">
+    <div *ngFor="let blog of allBlogs">
+        <p>{{blog.title}}</p>
+    </div>
+</div>
+
+
+
+<!-- <p>blog-list works!</p>
+
 <div>
     <button (click)="getAllBlogs()">Get Blogs</button>
 </div>
@@ -8,4 +18,4 @@
     <div *ngFor="let blog of allBlogs">
         <p>{{blog.title}}</p>
     </div>
-</div>
+</div> -->
