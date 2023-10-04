@@ -1,10 +1,19 @@
-<app-writer-details [writerId]="blogData.userId"></app-writer-details>
-
 <div *ngIf="blogData">
-    <h2>{{ blogData.title }}</h2>
-    <p>{{ blogData.body }}</p>
-    <p>{{blogData.userId}}</p>
-    <p>{{blogData.id}} </p>
+    <app-writer-details [writerId]="blogData.userId"></app-writer-details>
+    <div>
+        <section>
+            <h2>{{ blogData.title }}</h2>
+            <img width="75%" src="https://picsum.photos/900/400" alt={blogData.title} />
+        </section>
+        <p>
+            <span *ngFor="let elem of (blogData.title.split(' '))">
+                {{ blogData.body }}
+            </span>
+        </p>
+        <app-comment-list [pId]="blogId"></app-comment-list>
+    </div>
 </div>
-
-<app-comment-list [pId]="blogData.id"></app-comment-list>
+<div *ngIf="blogNotAvailable">
+    <p>{{blogNotAvailable}}</p>
+    <a [routerLink]="['/all-blogs']">Please see the list of available blogs.</a>
+</div>
