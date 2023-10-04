@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -9,6 +11,8 @@ import { AboutComponent } from './components/about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { BlogListclsComponent } from './components/blog-listcls/blog-listcls.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,15 @@ import { ChildComponent } from './components/child/child.component';
     ContactComponent,
     AboutComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    BlogListComponent,
+    BlogListclsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
