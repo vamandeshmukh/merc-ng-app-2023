@@ -22,7 +22,6 @@ export class BlogDataService {
   }
 
   // getBlogByTitle = (title: string) => { };
-
   // addnewBlog = (newBlog: Blog) => { };
 
   addNewBlog = (newBlog: Blog): Observable<Blog> => {

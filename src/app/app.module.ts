@@ -19,6 +19,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WriteBlogComponent } from './components/write-blog/write-blog.component';
 import { WriterDetailsComponent } from './components/writer-details/writer-details.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { WriterDetailsComponent } from './components/writer-details/writer-detai
     ToolbarComponent,
     FooterComponent,
     WriteBlogComponent,
-    WriterDetailsComponent
+    WriterDetailsComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
