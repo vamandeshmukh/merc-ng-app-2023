@@ -1,7 +1,7 @@
 <section>
     <h2>Write Your Blog</h2>
     <p>Write a blog and express yourself to the world!</p>
-    <form>
+    <form [formGroup]="blogForm" (ngSubmit)="submitBlog()">
         <input type="text" id="title" name="title" placeholder="Enter title" required />
         <br />
         <br />

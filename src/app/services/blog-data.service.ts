@@ -25,10 +25,11 @@ export class BlogDataService {
 
   // addnewBlog = (newBlog: Blog) => { };
 
-  addnewBlog = (newBlog: Blog) => {
+  addNewBlog = (newBlog: Blog): Observable<Blog> => {
     console.log(newBlog);
-    return this.http.post(this.blogUrl, newBlog);
+    return this.http.post<Blog>(this.blogUrl, newBlog);
   };
+
 }
 
 
