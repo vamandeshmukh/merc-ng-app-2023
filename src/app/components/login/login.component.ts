@@ -27,8 +27,9 @@ export class LoginComponent implements OnInit {
       const loginData = this.loginForm.value;
       this.userService.login(loginData)
         .subscribe((resp) => {
-          // code for jsonplaceholder typicode service 
           console.log(resp);
+          // if (resp.username === loginData.username && resp.password === loginData.password) {
+          // code for jsonplaceholder typicode service 
           if (resp.length > 0 && resp[0].username === loginData.username && resp[0].username === loginData.password) {
             alert(`Hi ${resp[0].username}! You've successfully logged in.`);
             this.loginForm.reset();

@@ -57,11 +57,11 @@ export class WriteBlogComponent {
 
 //   submitBlog = () => {
 //     console.log('submit');
-//     // if (this.blogForm.valid) {
+//      if (this.blogForm.valid) {
 //     const blogData = this.blogForm.value;
 //     this.blogService.addNewBlog(blogData)
 //       .subscribe((resp) => { alert(resp); });
-//     // }
+//      }
 //   };
 
 // }

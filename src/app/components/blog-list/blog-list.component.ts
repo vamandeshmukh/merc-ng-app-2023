@@ -12,12 +12,35 @@ export class BlogListComponent implements OnInit {
 
   constructor(private blogService: BlogDataService) { };
 
+  // get()
+  // .then()
+  // .catch()
+
+  // ngOnInit(): void {
+  //   this.blogService.getAllBlogs()
+  //     .subscribe((resp) => {
+  //       console.log(resp);
+  //       this.allBlogs = resp;
+  //     });
+  // }
+
+  // ngOnInit(): void {
+  //   this.blogService.getAllBlogs()
+  //     .subscribe({
+  //       next: () => { },
+  //       error: () => { },
+  //       complete: () => { }
+  //     });
+  // }
+
   ngOnInit(): void {
     this.blogService.getAllBlogs()
-      .subscribe((resp) => {
-        console.log(resp);
-        this.allBlogs = resp;
-      });
+      .subscribe({
+        next: (resp) => { console.log(resp); this.allBlogs = resp; },
+        error: (err) => { console.log(err); },
+        complete: () => { console.log('done!'); }
+      })
+      .unsubscribe();
   }
 }
 
