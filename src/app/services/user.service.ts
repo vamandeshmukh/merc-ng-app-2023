@@ -12,9 +12,13 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   register = (registerData: any): Observable<any> => {
+    console.log(registerData);
     return this.http.post(this.userUrl, registerData);
   };
 
-  login = () => { };
+  login = (loginData: any): Observable<any> => {
+    console.log(loginData);
+    return this.http.get(`${this.userUrl}?username=${loginData.username}`);
+  };
 
 }
