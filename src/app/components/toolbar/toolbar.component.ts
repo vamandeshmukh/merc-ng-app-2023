@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class ToolbarComponent {
 
+  constructor(private router: Router) { }
+
   randomBlogId: number = Math.floor(Math.random() * 100);
+
+  isLoggedInNow(): boolean {
+    return !!localStorage.getItem('loggedInUser');
+  }
+
+  logoutNow(): void {
+    alert('Logging out...');
+    localStorage.removeItem('loggedInUser');
+    this.router.navigate(['/home']);
+  }
 
 }

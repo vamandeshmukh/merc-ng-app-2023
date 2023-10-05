@@ -1,11 +1,9 @@
-<p>blog-list works!</p>
-
+<h2>Merc Blogs</h2>
 <div *ngIf="allBlogs">
     <div *ngFor="let blog of allBlogs">
         <a [routerLink]="['/blog-details', blog.id]">{{blog.title}}</a>
     </div>
 </div>
-
 
 
 

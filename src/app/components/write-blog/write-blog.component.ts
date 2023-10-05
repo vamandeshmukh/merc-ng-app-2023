@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Blog } from 'src/app/models/blog.model';
+
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BlogDataService } from 'src/app/services/blog-data.service';
 
 @Component({
@@ -7,31 +8,35 @@ import { BlogDataService } from 'src/app/services/blog-data.service';
   templateUrl: './write-blog.component.html',
   styleUrls: ['./write-blog.component.css']
 })
-export class WriteBlogComponent {
+export class WriteBlogComponent implements OnInit {
 
-  // template driven form in Angular 
+  // Reactive form in Angular 
   // https://angular.io/guide/forms-overview 
 
-  blogData: Blog | any = {
-    title: '',
-    body: '',
-    userId: 1,
-  };
+  blogForm: FormGroup | any = '';
 
-  constructor(private blogService: BlogDataService) { }
+  constructor(private formBuilder: FormBuilder, private blogService: BlogDataService) { }
+
+  ngOnInit(): void {
+    this.blogForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      body: ['', Validators.required]
+    });
+  }
 
   submitBlog = () => {
     console.log('submit');
-    this.blogService.addNewBlog(this.blogData)
-      .subscribe((resp) => { alert(resp); });
-    // }
+    if (this.blogForm.valid) {
+      const blogData = this.blogForm.value;
+      this.blogService.addNewBlog(blogData)
+        .subscribe((resp) => { alert(resp); this.blogForm.reset(); });
+    }
   };
-
 }
 
 
-// import { Component, OnInit } from '@angular/core';
-// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { Component } from '@angular/core';
+// import { Blog } from 'src/app/models/blog.model';
 // import { BlogDataService } from 'src/app/services/blog-data.service';
 
 // @Component({
@@ -39,29 +44,26 @@ export class WriteBlogComponent {
 //   templateUrl: './write-blog.component.html',
 //   styleUrls: ['./write-blog.component.css']
 // })
-// export class WriteBlogComponent implements OnInit {
+// export class WriteBlogComponent {
 
-//   // Reactive form in Angular 
+//   // template driven form in Angular 
 //   // https://angular.io/guide/forms-overview 
 
-//   blogForm: FormGroup | any = '';
+//   blogData: Blog | any = {
+//     title: '',
+//     body: '',
+//     userId: 1,
+//   };
 
-//   constructor(private formBuilder: FormBuilder, private blogService: BlogDataService) { }
-
-//   ngOnInit(): void {
-//     this.blogForm = this.formBuilder.group({
-//       title: ['', Validators.required],
-//       body: ['', Validators.required]
-//     });
-//   }
+//   constructor(private blogService: BlogDataService) { }
 
 //   submitBlog = () => {
 //     console.log('submit');
-//      if (this.blogForm.valid) {
-//     const blogData = this.blogForm.value;
-//     this.blogService.addNewBlog(blogData)
+//     this.blogService.addNewBlog(this.blogData)
 //       .subscribe((resp) => { alert(resp); });
-//      }
+//     // }
 //   };
 
 // }
+
+

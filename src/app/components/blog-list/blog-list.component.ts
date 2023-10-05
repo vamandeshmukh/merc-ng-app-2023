@@ -14,6 +14,8 @@ export class BlogListComponent implements OnInit {
 
   // get()
   // .then()
+  // .then()
+  // .catch()
   // .catch()
 
   // ngOnInit(): void {
@@ -37,13 +39,21 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.getAllBlogs()
       .subscribe({
-        next: (resp) => { console.log(resp); this.allBlogs = resp; },
-        error: (err) => { console.log(err); },
-        complete: () => { console.log('done!'); }
-      })
-      .unsubscribe();
+        next: (resp) => {
+          console.log(resp);
+          this.allBlogs = resp;
+        },
+        error: (err) => {
+          console.log(err);
+        },
+        complete: () => {
+          console.log('done!');
+        }
+      });
   }
+
 }
+
 
 
 // import { HttpClient } from '@angular/common/http';
