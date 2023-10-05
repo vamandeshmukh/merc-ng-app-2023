@@ -33,6 +33,7 @@ export class BlogListComponent implements OnInit {
   //     });
   // }
 
+  // please appy this to all the subscribe() in your code 
   ngOnInit(): void {
     this.blogService.getAllBlogs()
       .subscribe({
