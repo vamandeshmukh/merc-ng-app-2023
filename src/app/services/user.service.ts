@@ -17,7 +17,7 @@ export class UserService {
   };
 
   login = (loginData: any): Observable<any> => {
-    console.log(loginData);
+    console.log(loginData); // side-effect 
     return this.http.get(`${this.userUrl}?username=${loginData.username}`);
   };
 

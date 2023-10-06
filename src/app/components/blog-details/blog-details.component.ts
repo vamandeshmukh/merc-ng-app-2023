@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BlogDataService } from 'src/app/services/blog-data.service';
 import { Blog } from 'src/app/models/blog.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { map } from 'rxjs/operators';
 // import { CommentService } from 'src/app/services/comment.service';
 
 @Component({

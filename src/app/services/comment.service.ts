@@ -18,3 +18,29 @@ export class CommentService {
     return this.http.get<Comment[]>(`${this.commentUrl}?postId=${postId}`);
   };
 }
+
+
+// fetch.get()
+// Promise()
+// // 
+// .then()
+// .catch()
+
+// Observable
+// .subscribe()
+
+// .subscribe((resp) => { })
+// .subscribe({ next: () => {}, error: () => {}})
+// .subscribe({ next: () => {}, error: () => {}}, complete : () => {})
+
+// .subscribe(next: () => {}, error: () => {})
+
+// // .subscribe(
+//   next: () => {}, 
+//   error: () => {}
+//   )
+
+
+
+
+

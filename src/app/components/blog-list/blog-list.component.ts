@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { filter, map } from 'rxjs';
 import { BlogDataService } from 'src/app/services/blog-data.service';
-
+import { Blog } from 'src/app/models/blog.model';
 @Component({
   selector: 'app-blog-list',
   templateUrl: './blog-list.component.html',
