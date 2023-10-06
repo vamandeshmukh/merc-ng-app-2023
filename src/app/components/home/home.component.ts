@@ -60,6 +60,18 @@ export class HomeComponent {
 // attribute directives - *ngStyle, *ngClass, ...
 // custom directives - components 
 
+// access - 
+
+// static members 
+
+// ClassName.memberName
+// ClassName.memberName()
+
+// instance members 
+
+// obj.memberName()
+
+
 
 
 

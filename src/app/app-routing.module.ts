@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'write-blog', component: WriteBlogComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'write-blog', component: WriteBlogComponent },
+  { path: 'write-blog', component: WriteBlogComponent, canActivate: [localStorage.getItem('loggedInUser')] },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: Page404Component }
   // more routes 

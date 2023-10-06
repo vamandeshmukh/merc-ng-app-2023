@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { BlogDataService } from 'src/app/services/blog-data.service';
 import { Blog } from 'src/app/models/blog.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+// import { CommentService } from 'src/app/services/comment.service';
 
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css']
+  // ,
+  // providers: [BlogDataService, CommentService]
 })
 export class BlogDetailsComponent {
 
@@ -14,10 +17,15 @@ export class BlogDetailsComponent {
   blogData: Blog | any = '';
   blogNotAvailable: any = '';
 
-  constructor(private actRoute: ActivatedRoute, private blogDataService: BlogDataService) { }
+  constructor(private actRoute: ActivatedRoute, private blogDataService: BlogDataService) {
+    // blogDataService = new BlogDataService(); // not needed 
+  }
+
+  // const obj = new BlogDataService(); // not needed 
 
   ngOnInit() {
     this.blogId = this.actRoute.snapshot.paramMap.get('id');
+    // this.blogId = 101
     console.log(this.blogId);
     this.blogDataService.getBlogById(this.blogId)
       .subscribe(
@@ -133,6 +141,7 @@ export class BlogDetailsComponent {
 //       });
 //   }
 // }
+
 
 
 
