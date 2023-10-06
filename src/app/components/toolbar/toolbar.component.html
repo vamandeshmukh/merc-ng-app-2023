@@ -6,9 +6,9 @@
         <li><a [routerLink]="['all-blogs']">All Blogs</a></li>
         <li><a [routerLink]="['blog-details', randomBlogId]">Blog of the Day</a></li>
         <li *ngIf="isLoggedInNow()"><a [routerLink]="['write-blog']">Write Blog</a></li>
-        <li *ngIf="isLoggedInNow()" style="float:right"> <a (click)="logoutNow()" >Logout</a> </li>
-        <li *ngIf="!isLoggedInNow()" style="float:right"><a [routerLink]="['register']">Register</a></li>
-        <li *ngIf="!isLoggedInNow()" style="float:right"><a [routerLink]="['login']">Login</a></li>
+        <li *ngIf="isLoggedInNow()"> <a (click)="logoutNow()">Logout</a> </li>
+        <li *ngIf="!isLoggedInNow()"><a [routerLink]="['register']">Register</a></li>
+        <li *ngIf="!isLoggedInNow()"><a [routerLink]="['login']">Login</a></li>
     </ul>
 </nav>
 
