@@ -12,7 +12,6 @@
         <br />
         <input type="text" formControlName="topics" (input)="topicInputChange()">
         <br />
-        <br />
         <ul *ngIf="selectedTopics.length > 0">
             <li *ngFor="let sugg of selectedTopics" (click)="selectTopic(sugg)">{{sugg}}</li>
         </ul>

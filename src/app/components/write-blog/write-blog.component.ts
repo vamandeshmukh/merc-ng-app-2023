@@ -15,13 +15,14 @@ export class WriteBlogComponent implements OnInit {
 
   blogForm: FormGroup | any = '';
 
+  // fetch from backend 
   topicsList: string[] = ['Art', 'Food', 'Philosophy', 'Technology', 'Travel'];
-  selectedTopics: any = '';
+  selectedTopics: string[] = [];
 
   topicSuggestion = (query: string) => {
     console.log(query);
     return this.topicsList.filter(
-      (topic) => { topic.toLowerCase().includes(query.toLowerCase()) }
+      (topic) => { return topic.toLowerCase().includes(query.toLowerCase()) }
     )
   };
 
