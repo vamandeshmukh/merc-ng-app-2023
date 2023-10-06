@@ -28,7 +28,7 @@ export class WriteBlogComponent implements OnInit {
   topicInputChange = () => {
     console.log(this.selectedTopics);
     console.log(this.blogForm.get('topics').value);
-    this.selectedTopics = this.topicSuggestion(this.blogForm.get('topics').value);
+    this.selectedTopics = this.topicSuggestion(this.blogForm.get('topics').value); // this 
   };
 
   selectTopic = (topic: string) => {
