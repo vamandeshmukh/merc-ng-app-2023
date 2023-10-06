@@ -1,14 +1,19 @@
 <!-- Angular Reactive From  -->
 
+
 <section>
     <h2>Write Your Blog</h2>
     <p>Write a blog and express yourself to the world!</p>
     <form [formGroup]="blogForm" (ngSubmit)="submitBlog()">
+        <label for="title">Title:</label>
+        <br />
         <input type="text" id="title" formControlName="title" placeholder="Enter title" autofocus required />
         <br />
+        <label for="body">Body</label>
         <br />
         <textarea formControlName="body" id="body" cols="30" rows="10"></textarea>
         <br />
+        <label for="topic">Topic</label>
         <br />
         <input type="text" formControlName="topics" (input)="topicInputChange()">
         <br />
