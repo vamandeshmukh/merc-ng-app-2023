@@ -12,30 +12,6 @@ export class BlogListComponent implements OnInit {
 
   constructor(private blogService: BlogDataService) { };
 
-  // get()
-  // .then()
-  // .then()
-  // .catch()
-  // .catch()
-
-  // ngOnInit(): void {
-  //   this.blogService.getAllBlogs()
-  //     .subscribe((resp) => {
-  //       console.log(resp);
-  //       this.allBlogs = resp;
-  //     });
-  // }
-
-  // ngOnInit(): void {
-  //   this.blogService.getAllBlogs()
-  //     .subscribe({
-  //       next: () => { },
-  //       error: () => { },
-  //       complete: () => { }
-  //     });
-  // }
-
-  // please appy this to all the subscribe() in your code 
   ngOnInit(): void {
     this.blogService.getAllBlogs()
       .subscribe({
@@ -53,6 +29,96 @@ export class BlogListComponent implements OnInit {
   }
 
 }
+
+
+// import { Component, OnInit } from '@angular/core';
+// import { BlogDataService } from 'src/app/services/blog-data.service';
+
+// @Component({
+//   selector: 'app-blog-list',
+//   templateUrl: './blog-list.component.html',
+//   styleUrls: ['./blog-list.component.css']
+// })
+// export class BlogListComponent implements OnInit {
+
+//   allBlogs: any;
+
+//   constructor(private blogService: BlogDataService) { };
+
+//   ngOnInit(): void {
+//     this.blogService.getAllBlogs()
+//       .subscribe({
+//         next: (resp) => {
+//           console.log(resp);
+//           this.allBlogs = resp;
+//         },
+//         error: (err) => {
+//           console.log(err);
+//         },
+//         complete: () => {
+//           console.log('done!');
+//         }
+//       });
+//   }
+
+// }
+
+
+// import { Component, OnInit } from '@angular/core';
+// import { BlogDataService } from 'src/app/services/blog-data.service';
+
+// @Component({
+//   selector: 'app-blog-list',
+//   templateUrl: './blog-list.component.html',
+//   styleUrls: ['./blog-list.component.css']
+// })
+// export class BlogListComponent implements OnInit {
+
+//   allBlogs: any;
+
+//   constructor(private blogService: BlogDataService) { };
+
+//   // get()
+//   // .then()
+//   // .then()
+//   // .catch()
+//   // .catch()
+
+//   // ngOnInit(): void {
+//   //   this.blogService.getAllBlogs()
+//   //     .subscribe((resp) => {
+//   //       console.log(resp);
+//   //       this.allBlogs = resp;
+//   //     });
+//   // }
+
+//   // ngOnInit(): void {
+//   //   this.blogService.getAllBlogs()
+//   //     .subscribe({
+//   //       next: () => { },
+//   //       error: () => { },
+//   //       complete: () => { }
+//   //     });
+//   // }
+
+//   // please appy this to all the subscribe() in your code 
+//   ngOnInit(): void {
+//     this.blogService.getAllBlogs()
+//       .subscribe({
+//         next: (resp) => {
+//           console.log(resp);
+//           this.allBlogs = resp;
+//         },
+//         error: (err) => {
+//           console.log(err);
+//         },
+//         complete: () => {
+//           console.log('done!');
+//         }
+//       });
+//   }
+
+// }
 
 
 
