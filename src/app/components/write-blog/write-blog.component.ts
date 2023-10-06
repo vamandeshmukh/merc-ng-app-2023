@@ -15,17 +15,40 @@ export class WriteBlogComponent implements OnInit {
 
   blogForm: FormGroup | any = '';
 
+  topicsList: string[] = ['Art', 'Food', 'Philosophy', 'Technology', 'Travel'];
+  selectedTopics: any = '';
+
+  topicSuggestion = (query: string) => {
+    console.log(query);
+    return this.topicsList.filter(
+      (topic) => { topic.toLowerCase().includes(query.toLowerCase()) }
+    )
+  };
+
+  topicInputChange = () => {
+    console.log(this.selectedTopics);
+    console.log(this.blogForm.get('topics').value);
+    this.selectedTopics = this.topicSuggestion(this.blogForm.get('topics').value);
+  };
+
+  selectTopic = (topic: string) => {
+    console.log(topic);
+    this.blogForm.get('topics').setValue(topic);
+    this.selectedTopics = [];
+  };
+
   constructor(private formBuilder: FormBuilder, private blogService: BlogDataService) { }
 
   ngOnInit(): void {
     this.blogForm = this.formBuilder.group({
       title: ['', Validators.required],
-      body: ['', Validators.required]
+      body: ['', Validators.required],
+      topics: [[], Validators.required]
     });
   }
 
   submitBlog = () => {
-    console.log('submit');
+    console.log(this.blogForm.value);
     if (this.blogForm.valid) {
       const blogData = this.blogForm.value;
       this.blogService.addNewBlog(blogData)
@@ -65,5 +88,6 @@ export class WriteBlogComponent implements OnInit {
 //   };
 
 // }
+
 
 

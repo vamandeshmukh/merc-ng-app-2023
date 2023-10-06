@@ -10,6 +10,14 @@
         <textarea formControlName="body" id="body" cols="30" rows="10"></textarea>
         <br />
         <br />
+        <input type="text" formControlName="topics" (input)="topicInputChange()">
+        <br />
+        <br />
+        <ul *ngIf="selectedTopics.length > 0">
+            <li *ngFor="let sugg of selectedTopics" (click)="selectTopic(sugg)">{{sugg}}</li>
+        </ul>
+        <br />
+        <br />
         <input type="submit" value="Publish">
     </form>
 </section>
