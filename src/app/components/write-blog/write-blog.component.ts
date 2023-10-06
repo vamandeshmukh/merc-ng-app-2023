@@ -10,9 +10,6 @@ import { BlogDataService } from 'src/app/services/blog-data.service';
 })
 export class WriteBlogComponent implements OnInit {
 
-  // Reactive form in Angular 
-  // https://angular.io/guide/forms-overview 
-
   blogForm: FormGroup | any = '';
 
   // fetch from backend 
@@ -35,7 +32,7 @@ export class WriteBlogComponent implements OnInit {
   selectTopic = (topic: string) => {
     console.log(topic);
     this.blogForm.get('topics').setValue(topic);
-    this.selectedTopics = [];
+    // this.selectedTopics = [];
   };
 
   constructor(private formBuilder: FormBuilder, private blogService: BlogDataService) { }
@@ -56,6 +53,7 @@ export class WriteBlogComponent implements OnInit {
         .subscribe((resp) => { alert(resp); this.blogForm.reset(); });
     }
   };
+
 }
 
 
