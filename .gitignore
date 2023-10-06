@@ -2,6 +2,7 @@
 
 # No CSS 
 *.css
+*/*.css
 
 # Compiled output
 /dist
