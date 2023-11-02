@@ -18,6 +18,7 @@ export class WriteBlogComponent implements OnInit {
 
   topicSuggestion = (query: string) => {
     console.log(query);
+    console.log(query);
     return this.topicsList.filter(
       (topic) => { return topic.toLowerCase().includes(query.toLowerCase()) }
     )
